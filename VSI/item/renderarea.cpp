@@ -41,12 +41,9 @@ QSize RenderArea::sizeHint() const
 void RenderArea::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
+
     painter.setRenderHint(QPainter::Antialiasing);
     painter.fillRect(event->rect(), QBrush(Qt::white));
-
-    painter.save();
-
-    painter.restore();
 
     drawCoordinates(painter);
 }
@@ -199,7 +196,6 @@ void RenderArea::setLine_num(int value)
 
 void RenderArea::drawCoordinates(QPainter &painter)
 {
-    painter.save();
     //绘制正多边形的区域
     if(dialog_type == 1){
         drawpolygon(painter);
@@ -210,6 +206,5 @@ void RenderArea::drawCoordinates(QPainter &painter)
         drawtrapezium(painter);
         }
         return;
-    painter.restore();
 }
 

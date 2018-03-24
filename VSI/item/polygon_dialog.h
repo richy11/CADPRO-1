@@ -1,11 +1,19 @@
 #ifndef POLYGON_DIALOG_H
 #define POLYGON_DIALOG_H
 
-#include <QtWidgets>
+#include <QDialog>
+
+#include <QGroupBox>
+#include <QLabel>
+#include <QLineEdit>
+#include <QComboBox>
+#include <QRadioButton>
+#include <QLayout>
+#include <QPushButton>
 
 #include "renderarea.h"
 
-class Polygon_dialog : public QDialog,public QGraphicsPathItem
+class Polygon_dialog : public QDialog
 {
     Q_OBJECT
 

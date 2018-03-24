@@ -1391,9 +1391,9 @@ void Sketch::addProject()
     connect(scene_active, &Scene::sceneItemsChanged, this, &Sketch::onSceneItemsChanged);
     connect(scene_active, &Scene::pointSelected, this, &Sketch::onPointSelected);
     connect(scene_active, &Scene::lineSelected, this, &Sketch::onLineSelected);
-//    connect(scene_active, &Scene::ellipseSelected, this, &Sketch::onEllipseSelected);
+    connect(scene_active, &Scene::ellipseSelected, this, &Sketch::onEllipseSelected);
     connect(scene_active, &Scene::circleSelected, this, &Sketch::onCircleSelected);
-//    connect(scene_active, &Scene::arcSelected, this, &Sketch::onArcSelected);
+    connect(scene_active, &Scene::arcSelected, this, &Sketch::onArcSelected);
     connect(scene_active, &Scene::rectSelected, this, &Sketch::onRectSelected);
 
     QTreeWidgetItem *item_project = new QTreeWidgetItem(tree_project,QStringList(name_project_new));
@@ -2745,15 +2745,15 @@ void Sketch::onLineSelected(Line *line)
 }
 
 
-//void Sketch::onArcSelected(Arc *arc)
-//{
+void Sketch::onArcSelected(Arc *arc)
+{
 
-//}
+}
 
-//void Sketch::onEllipseSelected(Ellipse *ellipse)
-//{
+void Sketch::onEllipseSelected(Ellipse *ellipse)
+{
 
-//}
+}
 
 
 void Sketch::onCircleSelected(Circle *circle)

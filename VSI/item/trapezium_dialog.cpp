@@ -5,7 +5,12 @@
 
 
 //! [0]
-Trapezium_dialog::Trapezium_dialog()
+Trapezium_dialog::Trapezium_dialog():
+    alp1(30),
+    alp2(30),
+    H_size(50),
+    top_length_size(50),
+    trapezium_dialog_type(1)
 {
     intidialog();
 }

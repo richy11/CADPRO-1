@@ -86,6 +86,8 @@ void Polygon_dialog::createtop_insideGroupBox(){
 }
 
 void Polygon_dialog::initdialog(){
+
+
     createtopGroupBox();
     createtop_insideGroupBox();
 
@@ -100,6 +102,7 @@ void Polygon_dialog::initdialog(){
     QHBoxLayout *layout1 = new QHBoxLayout();
 
     originalRenderArea = new RenderArea(this,len_num,angle,penstyle,1);//显示绘图区域,1表示绘制正多边形的框
+
 
     layout1->addWidget(originalRenderArea);
     layout1->addWidget(topGroupBox);
